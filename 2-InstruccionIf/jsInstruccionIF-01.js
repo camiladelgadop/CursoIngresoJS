@@ -1,6 +1,15 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	var edad;
+
+	edad = 15;
+ 
+	If(edad)
+	{
+
+		alert ("niña bonita");
+
+	}
+	
 
 }//FIN DE LA FUNCIÓN
