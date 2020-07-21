@@ -2,10 +2,9 @@ function mostrar()
 {
 	var edad;
 
-	edad = 15;
+	edad = txtIdEdad.value;
  
-	If(edad)
-	{
+	if(edad == 15){
 
 		alert ("niña bonita");
 
