@@ -1,11 +1,13 @@
 function mostrar()
-{
-	var contador = 0;
+{  
+	var numeroRandom;
+	var max;
+	var min;
 
-	if(contador <11){
+	max = 11;
+	min = 1;
+	numeroRandom = Math.floor(Math.random() * (max - min)) + min;
 
-		alert(contador);
-		contador = contador +1;
-	}
+	console.log(numeroRandom);
 
-}//FIN DE LA FUNCIÓN
+}
