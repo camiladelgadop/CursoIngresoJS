@@ -19,6 +19,8 @@ function mostrar() {
 	//		alert(  " Vamos, la proxima se puede " );
 	//	}
 	//}
+
+	//******************************************************************************************************************* 
 	//(EJERCICIO)
 	// calcular dos numeos random entre 1 y 51:
 	//A)si son pares multiplicarlos, 
@@ -35,35 +37,45 @@ function mostrar() {
 	var elevarloUno;
 	var elevarloDos;
 	var resta;
+	var mensaje;
+
 
 	max = 51;
 	min = 1;
 	numeroRandomUno = Math.floor(Math.random() * (max - min)) + min;
 	numeroRandomDos = Math.floor(Math.random() * (max - min)) + min;
+	mensaje = " "
 
-
-	//A- CALCULAR SI EL NUMERO ES PAR 
+	//A) CALCULAR SI EL NUMERO ES PAR 
 	if (numeroRandomUno % 2 == 0 && numeroRandomDos % 2 == 0) {
 		multiplicacion = numeroRandomUno * numeroRandomDos;
-		alert(multiplicacion)
+		mensaje = multiplicacion
 
-	} else {
-		resta = numeroRandomUno - numeroRandomDos;
-		alert(resta);
-	}
+	} else { // B)
+		if (numeroRandomUno % 2 == 1 && numeroRandomDos % 2 == 1) {
+			resta = numeroRandomUno - numeroRandomDos;
+			mensaje = resta
+		}
+
+	} //C)
 	if (numeroRandomUno % 5 == 0) {
 		elevarloUno = Math.pow(numeroRandomUno, 3);
-		alert(elevarloUno);
+		mensaje = mensaje + elevarloUno
 	} else {
 		if (numeroRandomDos % 5 == 0) {
 			elevarloDos = Math.pow(numeroRandomDos, 3);
-			alert(elevarloDos);
-		}
+			mensaje = mensaje + elevarloDos
+		} 
+
+	} //D)
+
+	if(mensaje == " "){
+		mensaje = "no paso nada"
 	}
+	alert(mensaje)
 
 
 	console.log(numeroRandomUno);
 	console.log(numeroRandomDos);
-
 
 }//FIN DE LA FUNCIÓN
