@@ -9,36 +9,98 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{
+{  
+
+    const PRECIO = 35;
     var cantidad;
     var marca;
-    var descuento = txtIdprecioDescuento.value;
-    var descuentoCincuenta;
-    var dscuentoCuarenta;
-    var descuentoTreinta;
-    var descuentoVeinticinco;
-    var descuentoVeinte;
-    var descuentoQuince;
-    var descuentoDiez;
-    var descuentoCinco;
-    var aumentoDiez;
-    var total;
-    var totalAunmento;
+    var descuento;
+    var importeFinal;
+    var iibb;
     var precioConDescuento;
 
 
     cantidad = txtIdCantidad.value;
     marca = Marca.value;
-    precio = cantidad = 35;
     
+    
+   switch(cantidad){
+     case 1:
+     case 2:
+       descuento = 0;
+       break;
+      case 3:
+        if(marca == "ArgentinaLuz"){
+          descuento = 15;
+        }else if(marca == "FelipeLamparas"){
+          descento == 10;
+        }else{
+          descuento == 5;
+        }
+         break;
+      case 4:
+        if(marca == "ArgentinaLuz" || "FelipeLamparas"){
+          descuento = 25;
+        }else{
+          descuento = 20;
+        }
+        break;
+      case 5:
+        if(marca == "ArgentinaLuz"){
+          descuento = 40; 
+        }else{
+          descuento = 30;
+        }
+        break;
+      default:
+      descuento = 50;
    
+    }
+      // por unidad
+    precioConDescuento = PRECIO - PRECIO * descuento / 100;
+    document.getElementById("txtIdprecioDescuento").value = precioConDescuento;
+    //por todo
+    importeFinal = precioConDescuento * cantidad;
+
+    //para cacular si el importe final es mayor a 120 por los ingresos brutos
+
+    if(importeFinal > 120){
+      iibb = importeFinal * 10 /100;
+      importeFinal = importeFinal + iibb; 
+      alert ("total : $" + importeFinal + "usted pago $ " + iibb + " de ingresos brutos"  );
+    }else{
+      alert (" total $ " + importeFinal);
+    }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //A)
-    if (cantidad >= 6){
-        descuento = cantidad * precio *  0,50;
+   // if (cantidad >= 6){
+       // descuento = cantidad * precio *  0,50;
         
     //B)
-    }//else{
+    //}//else{
      //   if( cantidad == 5 && (marca == " ArgentinaLuz"){
        //     total = precio - dscuentoCuarenta;
          //   total = parseInt(total);

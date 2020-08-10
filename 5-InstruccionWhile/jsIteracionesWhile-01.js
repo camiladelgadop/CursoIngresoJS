@@ -3,5 +3,21 @@ al presionar el botón mostrar 10 repeticiones
 con números ASCENDENTE, desde el 1 al 10.*/
 function mostrar()
 {
-	alert('iteración while');
+
+var i = 0;
+
+while(i < 10){
+	i = i +1;
+	console.log(i);
+}
+
+
+
+	//var contador = 0;
+
+	//while(contador > 10){
+	//	contador = contador +1;
+
+	//	console.log(contador);
+	//}
 }//FIN DE LA FUNCIÓN
